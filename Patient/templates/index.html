@@ -1,0 +1,663 @@
+{% load static %}
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+          integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
+    <style>
+
+form {
+    border: 2px solid #f1f1f1;
+  }
+
+<!--.a-->
+<!--{-->
+<!--  color : white;-->
+<!--  font-size : 15px;-->
+<!--  text-decoration : none;-->
+<!--}-->
+<!--  input[type=text],-->
+<!--  input[type=password] {-->
+<!--    width: 100%;-->
+<!--    padding: 12px 20px;-->
+<!--    margin: 8px 0;-->
+<!--    display: inline-block;-->
+<!--    border: 1px solid #ccc;-->
+<!--    box-sizing: border-box;-->
+<!--  }-->
+
+button {
+background-color:#5f4c4c;
+color:white;
+margin: 0px 0px;
+font-size:20px ;
+font-family:timesnewroman ;
+height:40px;
+border:none;
+cursor: pointer;
+width: 100%;
+box-shadow: none;
+text-align:left;
+}
+
+.carousel-control-next-icon, .carousel-control-prev-icon {
+
+    position: absolute;
+    top: 245px;
+}
+
+.border{
+border:#fff solid 1px;
+padding:10px;
+border-radius:5px;
+
+}
+
+
+.pad-top{
+margin-top:30px !important;
+}
+.pic{
+margin: 0;
+    padding: 0;
+    background-image: url(/static/images/4.jpg);
+    background-size: cover;
+}
+}
+.pink {
+background-color: #e9a7b3 !important;
+}
+
+.grey{
+background-color: #ccc;
+    padding: 15px;
+    display: grid;
+}
+}
+button:hover {
+opacity: 1;
+}
+.rounded {
+    border-radius: .25rem!important;
+    background-color: #cbff91 !important;
+}
+
+
+<!--  .container {-->
+<!--    padding: 20px;-->
+<!--  }-->
+
+
+
+
+
+
+
+@media screen and (max-width: 300px) {
+span.new {
+display: block;
+float: none;
+}
+}
+body{
+background:url({% static 'images/bg-pat.png' %});
+background-size:auto;
+
+    }
+<!--x-->
+<!--{-->
+<!--  color : white;-->
+<!--  font-size : 20px;-->
+<!--  text-decoration : none;-->
+<!--}-->
+<!--x:hover-->
+<!--{-->
+<!--  color : yellow;-->
+<!--  font-size : 24px;-->
+<!--}-->
+<!--.xx-->
+<!--{-->
+<!--  text-align : justify;-->
+<!--font-size : 18px;-->
+<!--line-height : 10px;-->
+<!--text-indent : 0px;-->
+<!--padding : 10px;-->
+
+<!--opacity : 0.9;-->
+
+<!--}-->
+<!--.yy-->
+<!--{-->
+<!--  text-align : center;-->
+<!--font-size : 18px;-->
+<!--line-height : 10px;-->
+<!--text-indent : 10px;-->
+<!--padding : 0px;-->
+<!--//opacity : 0.7;-->
+<!--}-->
+<!--.container {-->
+<!--  position: relative;-->
+<!--  font-family: Arial;-->
+<!--}-->
+
+.text-block {
+position: absolute;
+bottom: 20px;
+right: 20px;
+background-color: black;
+color: white;
+padding-left: 20px;
+padding-right: 20px;
+}
+.card{
+border-radius:.625rem;
+background-color:var(--bg-white);
+box-shadow: .5084rem 1.1419rem 2.5rem 0 rgb(0 0 0 / 8%);
+padding:3.75rem 3.125rem 4.6875rem;
+-webkit-transition:all .4s;
+transition:all .4s;
+border:0;
+border: #000 solid 1px !important;
+    height: 370px;
+}
+.nav-bar{
+background-color:1d4052;
+color:#fff;
+width:100%;
+height:20px
+padding:2px;
+font-family:sans-serif;
+
+}
+.nav-bar img{
+height:20px;
+float:left;
+margin-left:20px;
+text-align:left;
+}
+
+.heading-text{
+font-size:55px !important;
+}
+.menu-right{
+text-align:right;
+}
+ul li{
+display:inline-block;
+margin:3px;
+list-style:none;
+}
+.h1{
+text-align:center;
+}
+.footer{
+width:100%;
+}
+
+    </style>
+</head>
+<body>
+<!--  <nav class="navbar navbar-light bg-">-->
+<!--  <div class="container-fluid">-->
+<!--    <a class="navbar-brand" href="#">-->
+<!--      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">-->
+<!--  <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>-->
+<!--</svg>-->
+<!--      Call Us At (000463-76763-635)-->
+<!--        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">-->
+<!--  <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>-->
+<!--</svg>-->
+<!--    </a>-->
+<!--  </div>-->
+<!--</nav>-->
+<!--&lt;!&ndash;&lt;!&ndash;  <div class="navbar">&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      <div class="logo">&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;          <h1>LOGO</h1>&ndash;&gt;&ndash;&gt;-->
+
+<!--&lt;!&ndash;      </div>&ndash;&gt;-->
+<!--&lt;!&ndash;      <div class="icon-bar">&ndash;&gt;-->
+<!--&lt;!&ndash;          <a href="#"><i class="fa-solid fa-house">&ndash;&gt;-->
+<!--&lt;!&ndash;          <div class="menu-items">&ndash;&gt;-->
+<!--&lt;!&ndash;              Home&ndash;&gt;-->
+<!--&lt;!&ndash;          </div>&ndash;&gt;-->
+<!--&lt;!&ndash;          </i></a>&ndash;&gt;-->
+<!--&lt;!&ndash;          <a href="#"><i class="fa-solid fa-address-book">&ndash;&gt;-->
+<!--&lt;!&ndash;              Contact&ndash;&gt;-->
+<!--&lt;!&ndash;          </i></a>&ndash;&gt;-->
+<!--&lt;!&ndash;          <a href="#"><i class="fa-solid fa-right-to-bracket">&ndash;&gt;-->
+<!--&lt;!&ndash;              Login&ndash;&gt;-->
+<!--&lt;!&ndash;          </i></a>&ndash;&gt;-->
+<!--&lt;!&ndash;          <a href="#"><i class="fa-duotone fa-id-card"></i>&ndash;&gt;-->
+<!--&lt;!&ndash;              Register&ndash;&gt;-->
+<!--&lt;!&ndash;          </i></a>&ndash;&gt;-->
+<!--&lt;!&ndash;      </div>&ndash;&gt;-->
+<!--&lt;!&ndash;  </div>&ndash;&gt;-->
+
+<!--<table><tr height="40px"></tr></table>-->
+<!--<table border='0' width="100%" style="background-color: white;text-align:center;" cellspacing="0" cellpadding="0"  align="center">-->
+<!--<tr height="10p">-->
+<!--<li><td width="60%"><form method="get" action="#" style="font-size: 23px">-->
+<!--    <button type="submit"><b>COVID-19 PREDICTION</b></button>-->
+<!--</form></td></li>-->
+<!--    <td width="10%"><form method="get" action="home" style="font-size: 0px">-->
+<!--    <button type="submit">HOME</button>-->
+<!--</form></td>-->
+<!--<td width="10%"><form method="get" action="Contact" style="font-size: 0px">-->
+<!--    <button type="submit">CONTACT</button>-->
+<!--</form>-->
+<!--<li><td width="10%"><form method="get" action="login" style="font-size: 20px">-->
+<!--    <button type="submit"><b>LOGIN</b></button>-->
+<!--</form></td></li>-->
+<!--<li><td width="10%"><form method="get" action="register" style="font-size: 20px" >-->
+<!--   <button type="submit"><b>REGISTER</b></button>-->
+<!--</form></td></li>-->
+
+
+<!--</tr>-->
+<!--</table>-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="{% url 'index' %}">
+            <img src="{% static 'images/26.jpg' %}" alt="" width="30" height="24" class="d-inline-block align-text-top">
+            <b>COVID-19</b>
+        </a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{% url 'index' %}">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"  href="{% url 'contact' %}">CONTACT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#precautions">PRECAUTIONS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'login' %}">LOGIN</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'reg' %}">REGISTER</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link border" href="#appo">Book An Appointment</a>
+                </li>
+
+            </ul>
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-success" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+</nav>
+
+
+
+<div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="100">
+            <img src="C:\Users\theut\TechCiti\USR_Covid19\Patient\static\images\" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h5 class="heading-text"> </h5>
+            </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="100">
+            <img src="https://source.unsplash.com/1400x500/?vaccination" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h5 class="heading-text">Covid 19</h5>
+            </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="100">
+            <img src="https://source.unsplash.com/1400x500/?corona" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h5 class="heading-text">Covid 19</h5>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+<br>
+
+<!-- Three columns of text below the carousel -->
+<div class="container">
+    <div class="border border-black">
+        <div class="bg-white border border-5 mt-mx-my-5">
+            <h1 class="text-center">SYMPTOMS</h1>
+            <div class="container">
+                <div class="row my-4 mx-4 ml-mr-2">
+                    <div class="col-lg-4 pink" style="background-color: #e9a7b3 !important;">
+                        <img src="{% static 'images/13.jpg' %}">
+                        <br>
+
+                        <h2>DRY COUGH</h2>
+                        <br>
+                        <h4>A tickling sensation in the throat can make you have a dry cough.</h4>
+
+                    </div><!-- /.col-lg-4 -->
+                    <div class="col-lg-4 grey">
+                        <img src="{% static 'images/16.jpg' %}">
+                        <br>
+                        <h2>HIGH FEVER</h2>
+                        <br>
+                        <h4>A fever is a body temperature that's higher than is considered normal.</h4>
+                    </div><!-- /.col-lg-4 -->
+                    <div class="col-lg-4 pink" style="background-color: #e9a7b3 !important;">
+                        <img src="{% static 'images/14.jpg' %}">
+                        <br>
+                        <h2>SORE THROAT</h2>
+                        <br>
+                        <h4>A sore throat is pain, scratchiness or irritation of the throat that often worsens when you
+                            swallow. </h4>
+                    </div><!-- /.col-lg-4 -->
+                </div><!-- /.row -->
+                <div class="row my-4 mx-4 ml-mr-2">
+                    <div class="col-lg-4 pink" style="background-color: #e9a7b3 !important;">
+                        <img src="{% static 'images/12.jpg' %}">
+
+                        <br>
+                        <h2>COLD</h2>
+                        <br>
+                        <h4>The common cold is a viral infection of your nose and throat (upper respiratory tract).</h4>
+
+                    </div><!-- /.col-lg-4 -->
+                    <div class="col-lg-4 grey">
+                        <img src="{% static 'images/15.jpg' %}">
+                        <br>
+                        <h2>DIFFICULTY IN BREATHING</h2>
+                        <br>
+                        <h4>Shortness of breath, or dyspnea, is an uncomfortable condition that makes it difficult to
+                            get air into your lungs.</h4>
+                    </div><!-- /.col-lg-4 -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <div class="row mb-2">
+        <div class="col-md-6">
+            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-4 d-flex flex-column position-static">
+
+                    <h3 class="mb-0">CORONA VIRUS</h3>
+                    <div class="mb-1 text-muted">Nov 12</div>
+                    <p strong class="card-text mb-auto d-inline-block mb-2 text-success">The most common symptoms of
+                        COVID-19 are fever, tiredness, and dry cough. Some patients may have aches and pains, nasal
+                        forest congestion, runny nose, sore throat or diarrhea. Once contaminated Hands can transfer the
+                        virus .The most symptoms COVID-19 fever.</p></strong>
+                </div>
+                <div class="col-auto d-none d-lg-block">
+                    <img src="{% static 'images/17.jpg' %}">
+
+
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-4 d-flex flex-column position-static">
+                    <h3 class="mb-0">CORONA VIRUS</h3>
+                    <div class="mb-1 text-muted">May 11</div>
+                    <p class="mb-auto d-inline-block mb-2 text-success">The main objective of this project is to predict
+                        either the person is infected with Covid 19 or not and compare which predictive model gives best
+                        accuracy comparing with other predictive models. This analysis will help the patients to check
+                        whether the patient is affected with the Covid 19 or not through Online.</p>
+
+                </div>
+                <div class="col-auto d-none d-lg-block">
+                    <img src="{% static 'images/17.jpg' %}">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+
+
+    <br>
+
+    <br>
+    <br>
+    <div class="container">
+        <div class="border border-dark">
+            <div class="bg-white border border-5 mt-mx-my-5"  id="precautions">
+                <h1 class="text-center font-family-verdana">PRECAUTIONS TO BE TAKEN</h1>
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-2">
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="{% static 'images/21.jpg' %}">
+
+
+                            <div class="card-body">
+                                <h3 class="text">WEAR MASKS</h3>
+                                <div class="d-flex justify-content-between align-items-center">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="{% static 'images/22.jpg' %}">
+
+                            <div class="card-body">
+                                <h3>SOCIAL DISTANCING</h3>
+
+                                <div class="d-flex justify-content-between align-items-center">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="{% static 'images/20.jpg' %}">
+
+                            <div class="card-body">
+                                <h3>CLEAN YOUR HANDS</h3>
+                                <div class="d-flex justify-content-between align-items-center">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="{% static 'images/23.jpg' %}">
+
+                            <div class="card-body">
+                                <h3>AVOID TOUCHING YOUR FACE.</h3>
+                                <div class="d-flex justify-content-between align-items-center">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="{% static 'images/24.jpg' %}">
+
+                            <div class="card-body">
+                                <h3>MAINTAIN PROPER HYGIENE.</h3>
+                                <div class="d-flex justify-content-between align-items-center">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="{% static 'images/25.jpg' %}">
+                            <div class="card-body">
+                                <h3>CLEAN AND DISINFECT SURFACES REGULARLY</h3>
+                                <div class="d-flex justify-content-between align-items-center">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <br>
+                    <br>
+
+
+                </div>
+
+
+                <!-- Optional JavaScript; choose one of the two! -->
+
+                <!-- Option 1: Bootstrap Bundle with Popper -->
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+                        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+                        crossorigin="anonymous"></script>
+
+                <!-- Option 2: Separate Popper and Bootstrap JS -->
+                <!--
+                <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+                -->
+
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+
+<div class="row pic" id="appo">
+
+
+    <div class="col-md-5">
+    </div>
+
+    <div class="col-md-2">
+        <div class="box" style="padding-top:25px;">
+<h1 class="text-white align-center" style="text-align:center;">Appointment</h1>
+<form action="register" method="POST" style="background-color: #fff;
+    padding: 10px;
+    width: 250px;
+    text-align: center;">
+<input type="hidden" name="csrfmiddlewaretoken" value="589n3bCCQdVrPbYHvpUMp3dIyHa6SISVuQun418cQIkxh4RuV581c7DhSrVuEQh2">
+<div class="inputbox">
+<input type="text" name="first_name" required="">
+<label>Firstname</label>
+</div>
+<div class="inputbox">
+<input type="text" name="last_name" required="">
+<label>Lastname</label>
+</div>
+<div class="inputbox">
+<input type="text" name="username" required="">
+<label>Username</label>
+</div>
+<div class="inputbox">
+<input type="email" name="email" required="">
+<label>Email</label>
+</div>
+
+<input type="submit" value="submit" style="background-color: #f00000;
+    border: none;
+    padding: 4px 20px;
+    margin: 12px;">
+</form>
+<div class="inputbox">
+
+</div>
+</div>
+    </div>
+
+    <div class="col-md-5">
+    </div>
+
+</div>
+
+
+<div class="">
+    <footer class="bg-dark text-white pt-5 pb-4 pad-top">
+        <div class="row">
+            <div class="container text-center text-md-left">
+                <div class="row text-center text-md-left">
+                    <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                        <h5 class="text-uppercase mb-4 font-weighted-bold text-warning">Covid-19 Prediction</h5>
+                        <p>This is a website for Covid-19 prediction.</p>
+                    </div>
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                        <h5 class="text-uppercase mb-4 font-weighted-bold text-warning">Services</h5>
+                        <p>
+                            <a href="#" class="text-white" style="text-decoration:none;"> Prediction</a>
+                        </p>
+                        <p>
+                            <a href="#" class="text-white" style="text-decoration:none;"> Vaccine</a>
+                        </p>
+                        <p>
+                            <a href="#" class="text-white" style="text-decoration:none;">Appointment</a>
+                        </p>
+                        <p>
+                            <a href="#" class="text-white" style="text-decoration:none;"> </a>
+                        </p>
+                    </div>
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                        <h5 class="text-uppercase mb-4 font-weighted-bold text-warning">Precautions</h5>
+                        <p>
+                            Social Distancing
+                        </p>
+                        <p>
+                            Wear Mask
+                        </p>
+                        <p>
+                            Wash Hands
+                        </p>
+
+                    </div>
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                        <h5 class="text-uppercase mb-4 font-weighted-bold text-warning">Contact</h5>
+                        <p>
+                            <i class="fas fa-home mr-3"></i> Greater Noida , India
+                        </p>
+                        <p>
+                            <i class="fas fa-envelope mr-3"></i> Covid19@gmail.com
+                        </p>
+                        <p>
+                            <i class="fas fa-phone mr-3"></i> +91 8765432981
+                        </p>
+                    </div>
+
+                    <hr class="row align-items-center">
+                    <div class="col-md-12 col-lg-12 ">
+                        <p style="text-align:center;">Copyright 2022 All rights reserved by:
+                            <a href="#" style="text-decoration:none;">
+                                <strong class="text-warning">Covid-19 Prediction</strong>
+                            </a></p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+</div>
+</body>
+{% block content %} {% endblock %}
+</html>
